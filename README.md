@@ -1,4 +1,4 @@
-# Chicago Crimes Analysis and Forecasting (2020–2022)
+# Chicago Crimes Analysis and Forecasting (2001–2022)
 ## 📌 Project Overview
 
 This project analyzes and forecasts crime trends in Chicago using Python (for time series modeling) and Tableau (for interactive visualizations). The analysis focuses on patterns across years 2020, 2021, and 2022, exploring trends by district, time of day, months, and holidays, while also detecting cycles and seasonality in crime data.
