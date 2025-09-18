@@ -9,106 +9,106 @@ A special emphasis is placed on time series forecasting for specific crime types
 
 ### Python
 
-Pandas & NumPy (data cleaning and preprocessing)
+1- Pandas & NumPy (data cleaning and preprocessing)
 
-Matplotlib & Seaborn (visualization)
+2- Matplotlib & Seaborn (visualization)
 
-Statsmodels (manual ARIMA/SARIMA modeling)
+3- Statsmodels (manual ARIMA/SARIMA modeling)
 
-Pmdarima (auto_arima tuning and diagnostics)
+4- Pmdarima (auto_arima tuning and diagnostics)
 
 ### Tableau
 
-Interactive dashboards
+1- Interactive dashboards
 
-District-level and time-based crime analysis
+2- District-level and time-based crime analysis
 
-Dataset: Chicago crime records (2020–2022)
+3- Dataset: Chicago crime records (2020–2022)
 
 ## 🔍 Analysis Topics
 
-Police Districts – Which district had the most vs. least crimes in 2022?
+1- Police Districts – Which district had the most vs. least crimes in 2022?
 
-Yearly Trends – Is crime overall increasing or decreasing? Which crimes show opposite trends?
+2- Yearly Trends – Is crime overall increasing or decreasing? Which crimes show opposite trends?
 
-Rush Hours (AM vs. PM) – Comparing 7–10 AM vs. 4–7 PM. What are the top 5 crimes in each? Are motor vehicle thefts more common in AM or PM?
+3- Rush Hours (AM vs. PM) – Comparing 7–10 AM vs. 4–7 PM. What are the top 5 crimes in each? Are motor vehicle thefts more common in AM or PM?
 
-Monthly Trends – Which months are high/low crime? Which crimes break the pattern?
+4- Monthly Trends – Which months are high/low crime? Which crimes break the pattern?
 
-Holiday Crimes – Top 3 holidays with the most crimes + top 5 crimes for each holiday.
+5- Holiday Crimes – Top 3 holidays with the most crimes + top 5 crimes for each holiday.
 
-Seasonality – Detecting cycles and recurring crime patterns.
+6- Seasonality – Detecting cycles and recurring crime patterns.
 
-Forecasting Theft vs. Narcotics – Building and evaluating time series models.
+7- Forecasting Theft vs. Narcotics – Building and evaluating time series models.
 
 ## 📊 Forecasting Methodology
 
-For Theft and Narcotics, the following steps were applied:
+ For Theft and Narcotics, the following steps were applied:
 
-Data Transformation
+ 1- Data Transformation
 
-Converted crime data into a monthly time series using .size().
+   - Converted crime data into a monthly time series using .size().
 
-Checked for and handled null values.
+   - Checked for and handled null values.
 
-Time Series Exploration
+  2- Time Series Exploration
 
-Decomposed the series to detect seasonality.
+   - Decomposed the series to detect seasonality.
 
-Applied non-seasonal and/or seasonal differencing if needed.
+  -  Applied non-seasonal and/or seasonal differencing if needed.
 
-Used ACF and PACF plots to guide ARIMA/SARIMA order selection.
+  - Used ACF and PACF plots to guide ARIMA/SARIMA order selection.
 
-Modeling
+3- Modeling
 
-Split data into training and test sets (6-month forecast horizon).
+ - Split data into training and test sets (6-month forecast horizon).
+ 
+ - Fit a manual ARIMA/SARIMA model based on exploratory analysis.
 
-Fit a manual ARIMA/SARIMA model based on exploratory analysis.
+ - Generated forecasts and compared predictions vs. test data.
 
-Generated forecasts and compared predictions vs. test data.
+ - Evaluated models using metrics (MAE, RMSE, MAPE).
 
-Evaluated models using metrics (MAE, RMSE, MAPE).
+4- Auto ARIMA Tuning
 
-Auto ARIMA Tuning
+ - Applied pmdarima.auto_arima to find best parameters.
 
-Applied pmdarima.auto_arima to find best parameters.
+ - Fit model on training data with optimal parameters.
 
-Fit model on training data with optimal parameters.
+ - Re-evaluated metrics and forecast accuracy.
 
-Re-evaluated metrics and forecast accuracy.
+5- Final Model Selection
 
-Final Model Selection
+ - Compared manual vs. auto_arima results.
 
-Compared manual vs. auto_arima results.
+ - Justified the final model choice using metrics and diagnostics.
 
-Justified the final model choice using metrics and diagnostics.
+6- True Forecasting
 
-True Forecasting
+ - Trained the final model on the entire dataset.
 
-Trained the final model on the entire dataset.
-
-Produced forecasts beyond 2022 for Theft and Narcotics.
+ - Produced forecasts beyond 2022 for Theft and Narcotics.
 
 ## 📈 Forecast Evaluation
 
 For each crime type:
 
-Calculated predicted net change (raw counts) from start to end of forecast.
+ - Calculated predicted net change (raw counts) from start to end of forecast.
 
-Converted raw delta into percent change.
+ - Converted raw delta into percent change.
 
 ## Final Comparative Questions
 
-Which of the two crimes is forecasted to have the highest monthly count by the end?
+1- Which of the two crimes is forecasted to have the highest monthly count by the end?
 
-Which shows the largest net change?
+2- Which shows the largest net change?
 
-Which shows the largest percent change?
+3- Which shows the largest percent change?
 
 ## Final Recommendations
 
-Summarized insights for stakeholders.
+ 1- Summarized insights for stakeholders.
 
-Provided reporting-quality visuals (time series + forecasts).
+2- Provided reporting-quality visuals (time series + forecasts).
 
-Suggested focus areas for law enforcement resource allocation.
+3- Suggested focus areas for law enforcement resource allocation.
