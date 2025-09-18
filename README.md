@@ -112,3 +112,9 @@ For each crime type:
 2- Provided reporting-quality visuals (time series + forecasts).
 
 3- Suggested focus areas for law enforcement resource allocation.
+## 📊 Tableau Dashboard
+
+[🔗 View the dashboard on Tableau Public](https://public.tableau.com/app/profile/dina.almasri/viz/Chichagocrimes/Dashboard1?publish=yes)
+
+
+
